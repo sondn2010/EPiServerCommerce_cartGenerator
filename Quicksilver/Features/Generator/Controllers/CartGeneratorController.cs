@@ -700,8 +700,8 @@ namespace EPiServer.Reference.Commerce.Site.Features.Start.Controllers
         public ViewResult Index(FormCollection collection)
         {
             var numberOfCart = string.IsNullOrEmpty(collection["numberOfCart"]) ? 1 : int.Parse(collection["numberOfCart"]);
-            var numberOfShipment = string.IsNullOrEmpty(collection["numberOfCart"]) ? 1 : int.Parse(collection["numberOfCart"]);
-            var numberOfItem = string.IsNullOrEmpty(collection["numberOfCart"]) ? 1 : int.Parse(collection["numberOfCart"]);
+            var numberOfShipment = string.IsNullOrEmpty(collection["numberOfShipment"]) ? 1 : int.Parse(collection["numberOfShipment"]);
+            var numberOfItem = string.IsNullOrEmpty(collection["numberOfItem"]) ? 1 : int.Parse(collection["numberOfItem"]);
 
             CreateCart(numberOfCart, numberOfShipment, numberOfItem);
             ViewBag.Message = $"{numberOfCart} carts were created!";
